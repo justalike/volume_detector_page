@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <div class="autocomplete">
             <div class="divider"></div>
             <div class="pair">
-                <input type="text" id="pair${n++}" name="pair" placeholder="Ввод пары" class="pair-input">
+                <input type="text" id="pair${n++}" name="pair" placeholder="Введите пару" class="pair-input">
                 <button class="delete-btn" onclick="removePair(this)">Удалить</button>
             </div>
             </div>

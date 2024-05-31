@@ -20,18 +20,18 @@
         </div>
         <div class="content">
             <p class="description">выберите таймфрейм и желаемые пары</p>
-            <h1>Торговая пара:</h1>
+
             <div class="pair-section" id="pair-section">
                 <div class="pair">
-                    <!-- <input type="text" name="pair" placeholder="Ввод пары" class="pair-input"> -->
                     <label class="timeframe-label">Таймфрейм</label>
                     <select id="timeframe" class="timeframe-select"></select>
                 </div>
+                <h1>Торговые пары:</h1>
                 <div class="pair">
                     <div class="autocomplete">
                         <div class="pair-entry">
                             <div class="divider"></div>
-                            <input type="text" id="pair{n++}" name="pair" placeholder="Ввод пары" class="pair-input">
+                            <input type="text" id="pair{n++}" name="pair" placeholder="Введите пару" class="pair-input">
                             <button class="delete-btn" onclick="removePair(this)">Удалить</button>
                         </div>
                     </div>
