@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0">
+    <title>Детектор объёмов</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+
+            <h1>Детектор объёмов</h1>
+        </div>
+        <div class="content">
+            <p class="description">выберите таймфрейм и желаемые пары</p>
+            <h1>Торговая пара:</h1>
+            <div class="pair-section" id="pair-section">
+                <div class="pair">
+                    <!-- <input type="text" name="pair" placeholder="Ввод пары" class="pair-input"> -->
+                    <label class="timeframe-label">Таймфрейм</label>
+                    <select id="timeframe" class="timeframe-select"></select>
+                </div>
+                <div class="pair">
+                    <div class="autocomplete">
+                        <div class="pair-entry">
+                            <div class="divider"></div>
+                            <input type="text" id="pair{n++}" name="pair" placeholder="Ввод пары" class="pair-input">
+                            <button class="delete-btn" onclick="removePair(this)">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="add-pair-btn" onclick="addPair()">Добавить пару</button>
+            <p class="description">настройте значения индикатора</p>
+            <div class="settings">
+                <div class="setting-item">
+                    <label>Длинная MA</label>
+                    <input type="number" id="longMA-value" name="longMA" value="200">
+                    <div class="tooltip-container">
+                        <span class="tooltip-icon">?</span>
+                        <div class="tooltip">Средняя скользящая объёма (VMA) усредняющая свечные данные об объёмах за
+                            последние N
+                            свечей.</div>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <label>Короткая MA</label>
+                    <input type="number" id="shortMA-value" name="shortMA" value="25">
+                    <div class="tooltip-container">
+                        <span class="tooltip-icon">?</span>
+                        <div class="tooltip">Аналогично VMA длинной, обычно используются параметры значительно ниже
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <label>Длинный X</label>
+                    <input type="number" id="longX-value" name="longX" value="2">
+                    <div class="tooltip-container">
+                        <span class="tooltip-icon">?</span>
+                        <div class="tooltip">Это значение - мультипликатор значения для длинной VMA. Подробнее по
+                            команде
+                            <code>/guide</code>.
+                        </div>
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <label>Короткий X</label>
+                    <input type="number" id="shortX-value" name="shortX" value="5">
+                    <div class="tooltip-container">
+                        <span class="tooltip-icon">?</span>
+                        <div class="tooltip">Это значение - мультипликатор значения для короткой VMA. Подробнее по
+                            команде
+                            <code>/guide</code>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="alert-btn" id="submitButton">Создать оповещение</button>
+
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+    <script src="tf-options.js" type="module"></script>
+</body>
+
+</html>

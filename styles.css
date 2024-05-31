@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #091b27;
+    color: white;
+}
+
+.container {
+    width: 320px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #091b27;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 50px;
+    height: 50px;
+    background-color: #9db3c2;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+h1 {
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    margin: 0;
+}
+
+.content p {
+    margin: 10px auto;
+    font-size: 14px;
+    color: #9db3c2;
+    width: 60%;
+    padding: 2px;
+}
+
+.divider {
+    width: 75%;
+    height: 1px;
+    background-color: rgba(183, 183, 183, 0.3);
+    margin: 10px 0;
+    margin-left: 12.5%
+}
+
+.pair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pair-section {
+    margin-bottom: 20px;
+}
+
+.pair-entry {
+    width: 100%;
+}
+
+.pair-input {
+    background-color: #000e1b;
+    border: 0px solid #3a4a5a;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 40%;
+    margin-right: 10px;
+}
+
+
+.timeframe-label {
+    margin-right: 10px;
+}
+
+.timeframe-select {
+    width: 20%;
+    background-color: #000e1b;
+    border: 0px solid #3a4a5a;
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.delete-btn,
+.add-pair-btn,
+.alert-btn {
+    background-color: #000e1b;
+    border: 0px solid #3a4a5a;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    width: 25%;
+    background-color: #aa2b48;
+}
+
+.add-pair-btn {
+    width: 50%;
+    background-color: #017643;
+    margin-top: 10px;
+}
+
+.settings {
+    margin-bottom: 20px;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.settings label {
+    flex: 1;
+    margin-left: 35px;
+    margin-right: 5px;
+    text-align: left;
+}
+
+.settings input {
+    width: 30%;
+    padding: 8px;
+    border: 0px solid #3a4a5a;
+    border-radius: 10px;
+    margin-right: 10px;
+    background-color: #000e1b;
+    color: white;
+    text-align: center;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip-icon {
+    width: 20px;
+    height: 20px;
+    background-color: #214055;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.tooltip {
+    visibility: hidden;
+    background-color: #192530c9;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    /* Position above the icon */
+    left: 50%;
+    margin-left: -60px;
+    width: 120px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    font-size: 12px;
+}
+
+.alert-btn {
+    background-color: #096898;
+    width: 50%;
+}
+
+/* Autocomplete styles */
+.autocomplete {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+
+.autocomplete input[type="text"] {
+    width: 150px;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: #000e1b;
+    color: #b7b7b7;
+    margin-left: 15px;
+    margin-bottom: 0px;
+}
+
+.autocomplete-items {
+    width: 150px;
+    position: absolute;
+    border: 1px solid #4a4a4ac6;
+    z-index: 99;
+    top: 100%;
+    left: 12%;
+    right: 0;
+    background-color: #0a1621;
+    color: #b7b7b7;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.autocomplete-items div:last-child {
+    border-bottom: none;
+}
+
+.autocomplete-items div:hover {
+    background-color: #1a2b3c;
+    color: #ffffff;
+}
+
+.autocomplete-active {
+    background-color: #1a2b3c;
+    color: #ffffff;
+}
